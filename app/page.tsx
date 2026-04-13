@@ -5,6 +5,9 @@ import Button from "@/components/Button";
 import ProjectBlock from "@/components/ProjectBlock";
 import Section from "@/components/Section";
 
+const RESUME_HREF =
+  "https://drive.google.com/file/d/1UMii781EzDmhS2TOCQ-5w04W1ApTfeV9/view?usp=sharing";
+
 export default function Home() {
   const [activeSection, setActiveSection] = useState("me");
 
@@ -82,6 +85,9 @@ export default function Home() {
           <p className="mt-4 text-sm text-gray-500">Mumbai, India</p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Button href="#experience">View Work</Button>
+            <Button href={RESUME_HREF} external>
+              View Resume
+            </Button>
           </div>
         </header>
 
@@ -263,6 +269,17 @@ export default function Home() {
                 className="underline underline-offset-4 transition-opacity hover:opacity-70"
               >
                 saurabhlm10@gmail.com
+              </a>
+            </p>
+            <p>
+              <span className="font-medium text-gray-900">Resume:</span>{" "}
+              <a
+                href={RESUME_HREF}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-4 transition-opacity hover:opacity-70"
+              >
+                View resume
               </a>
             </p>
             <p>
