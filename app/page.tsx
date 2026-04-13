@@ -90,18 +90,18 @@ export default function Home() {
             <article className="relative py-16 pl-8">
               <span className="absolute -left-[7px] top-20 h-3.5 w-3.5 rounded-full border border-indigo-200 bg-indigo-50" />
               <p className="text-sm text-gray-500">Mar 2024 – Jan 2026</p>
-              <h3 className="mt-3 text-2xl font-semibold tracking-tight text-indigo-800">
+              <h3 className="mt-3 text-3xl font-bold tracking-tight text-gray-950 sm:text-4xl">
                 EURON
               </h3>
-              <p className="mt-2 text-base font-medium text-gray-800">
+              <p className="mt-3 text-base font-medium text-gray-800">
                 Software Development Engineer - 2 (Founding Engineer)
               </p>
-              <p className="mt-4 max-w-2xl text-base leading-7 text-gray-600">
+              <p className="mt-5 max-w-2xl text-base leading-7 text-gray-600">
                 Built and scaled a production-grade AI-powered learning platform
                 used by 50,000+ users.
               </p>
 
-              <div className="mt-10 border-t border-gray-200">
+              <div className="mt-12 border-t border-gray-200 pt-2">
                 <ProjectBlock
                   featured
                   title="LMS (Learning Management System)"
@@ -126,7 +126,7 @@ export default function Home() {
                 />
               </div>
 
-              <div className="border-t border-gray-200">
+              <div className="border-t border-gray-200 pt-2">
                 <ProjectBlock
                   featured
                   title="AVANI (AI Mock Interviewer)"
@@ -150,7 +150,7 @@ export default function Home() {
                 />
               </div>
 
-              <div className="border-t border-gray-200">
+              <div className="border-t border-gray-200 pt-2">
                 <ProjectBlock
                   title="Bytes"
                   points={[
@@ -162,7 +162,7 @@ export default function Home() {
                 />
               </div>
 
-              <div className="border-t border-gray-200">
+              <div className="border-t border-gray-200 pt-2">
                 <ProjectBlock
                   title="AI Job Platform"
                   points={[
@@ -174,7 +174,7 @@ export default function Home() {
                 />
               </div>
 
-              <div className="border-t border-gray-200">
+              <div className="border-t border-gray-200 pt-2">
                 <ProjectBlock
                   title="AI Internship Portal"
                   points={[
@@ -185,7 +185,7 @@ export default function Home() {
                 />
               </div>
 
-              <div className="border-t border-gray-200">
+              <div className="border-t border-gray-200 pt-2">
                 <ProjectBlock
                   title="AI Blog Platform"
                   points={["Automated content generation and publishing workflows"]}
@@ -197,13 +197,13 @@ export default function Home() {
             <article className="relative py-16 pl-8">
               <span className="absolute -left-[7px] top-20 h-3.5 w-3.5 rounded-full border border-indigo-200 bg-indigo-50" />
               <p className="text-sm text-gray-500">Jan 2023 – Feb 2024</p>
-              <h3 className="mt-3 text-2xl font-semibold tracking-tight text-indigo-800">
+              <h3 className="mt-3 text-3xl font-bold tracking-tight text-gray-950 sm:text-4xl">
                 INEURON
               </h3>
-              <p className="mt-2 text-base font-medium text-gray-800">
+              <p className="mt-3 text-base font-medium text-gray-800">
                 Software Development Engineer - 1
               </p>
-              <div className="mt-10 border-t border-gray-200">
+              <div className="mt-12 border-t border-gray-200 pt-2">
                 <ProjectBlock
                   title="Zoom Integration for LMS"
                   points={[
@@ -214,7 +214,7 @@ export default function Home() {
                   techStack={["Next.js", "Node.js", "Express", "MongoDB"]}
                 />
               </div>
-              <div className="border-t border-gray-200">
+              <div className="border-t border-gray-200 pt-2">
                 <ProjectBlock
                   title="Support Community Portal"
                   points={[
