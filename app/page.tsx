@@ -1,36 +1,56 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Button from "@/components/Button";
 import ProjectBlock from "@/components/ProjectBlock";
 import Section from "@/components/Section";
 
 export default function Home() {
+  const [activeSection, setActiveSection] = useState("me");
+
+  useEffect(() => {
+    const sections = ["me", "experience", "skills", "contact"]
+      .map((id) => document.getElementById(id))
+      .filter((element): element is HTMLElement => element !== null);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntry = entries.find((entry) => entry.isIntersecting);
+        if (visibleEntry) {
+          setActiveSection(visibleEntry.target.id);
+        }
+      },
+      {
+        threshold: 0.35,
+        rootMargin: "-20% 0px -55% 0px",
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
+  const navItemClass = (sectionId: string) =>
+    `block transition-colors ${
+      activeSection === sectionId
+        ? "font-semibold text-indigo-700"
+        : "text-gray-500 hover:text-indigo-700"
+    }`;
+
   return (
     <div className="mx-auto w-full max-w-[750px] px-6 py-24 sm:py-32">
       <aside className="fixed left-8 top-1/2 hidden -translate-y-1/2 lg:block">
         <nav className="space-y-4 text-sm">
-          <a
-            href="#me"
-            className="block text-gray-500 transition-colors hover:text-indigo-700"
-          >
+          <a href="#me" className={navItemClass("me")}>
             Me
           </a>
-          <a
-            href="#experience"
-            className="block text-gray-500 transition-colors hover:text-indigo-700"
-          >
+          <a href="#experience" className={navItemClass("experience")}>
             Experience
           </a>
-          <a
-            href="#skills"
-            className="block text-gray-500 transition-colors hover:text-indigo-700"
-          >
+          <a href="#skills" className={navItemClass("skills")}>
             Skills
           </a>
-          <a
-            href="#contact"
-            className="block text-gray-500 transition-colors hover:text-indigo-700"
-          >
+          <a href="#contact" className={navItemClass("contact")}>
             Contact
           </a>
         </nav>

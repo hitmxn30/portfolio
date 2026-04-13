@@ -14,11 +14,11 @@ export default function Button({
   variant = "bordered",
 }: ButtonProps) {
   const baseClassName =
-    "inline-flex items-center text-sm font-medium transition-opacity hover:opacity-70";
+    "inline-flex items-center text-sm font-medium transition-colors duration-200";
   const variantClassName =
     variant === "bordered"
-      ? "border border-gray-200 px-4 py-2 text-gray-900"
-      : "text-gray-700 underline underline-offset-4";
+      ? "border border-indigo-200 bg-indigo-50 px-4 py-2 text-indigo-700 hover:bg-indigo-100"
+      : "text-gray-700 underline underline-offset-4 hover:text-indigo-700";
 
   if (external) {
     return (
