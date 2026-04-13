@@ -17,7 +17,6 @@ export default function Home() {
     const updateActiveSection = () => {
       const activationOffset = 160;
       const scrollPosition = window.scrollY + activationOffset;
-
       let currentSection: string = "me";
 
       for (const section of sections) {
@@ -251,7 +250,11 @@ export default function Home() {
           </div>
         </Section>
 
-        <Section id="contact" title="Contact" className="pb-24 sm:pb-32">
+        <Section
+          id="contact"
+          title="Contact"
+          className="min-h-[70vh] pb-24 sm:min-h-[80vh] sm:pb-32"
+        >
           <div className="space-y-4 text-base leading-7 text-gray-600">
             <p>
               <span className="font-medium text-gray-900">Email:</span>{" "}
