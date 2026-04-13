@@ -1,9 +1,10 @@
 type ProjectBlockProps = {
   title: string;
-  description: string;
+  description?: string;
   videoEmbedUrl?: string;
   points: string[];
   techStack: string[];
+  featured?: boolean;
 };
 
 export default function ProjectBlock({
@@ -12,16 +13,23 @@ export default function ProjectBlock({
   videoEmbedUrl,
   points,
   techStack,
+  featured = false,
 }: ProjectBlockProps) {
   return (
-    <article className="py-12 first:pt-0 last:pb-0">
-      <h3 className="text-2xl font-semibold tracking-tight text-gray-950 sm:text-3xl">
+    <article className="py-8 sm:py-10">
+      <h3
+        className={`font-semibold tracking-tight text-gray-950 ${
+          featured ? "text-2xl sm:text-3xl" : "text-xl sm:text-2xl"
+        }`}
+      >
         {title}
       </h3>
-      <p className="mt-4 text-base leading-7 text-gray-600">{description}</p>
+      {description ? (
+        <p className="mt-3 text-base leading-7 text-gray-600">{description}</p>
+      ) : null}
 
       {videoEmbedUrl ? (
-        <div className="mt-8 overflow-hidden border border-gray-200">
+        <div className="mt-6 overflow-hidden border border-gray-200">
           <iframe
             title={`${title} video`}
             src={videoEmbedUrl}
@@ -34,13 +42,13 @@ export default function ProjectBlock({
         </div>
       ) : null}
 
-      <ul className="mt-8 space-y-2 text-base leading-7 text-gray-600">
+      <ul className="mt-6 space-y-2 text-base leading-7 text-gray-600">
         {points.map((point) => (
           <li key={point}>- {point}</li>
         ))}
       </ul>
 
-      <p className="mt-8 text-sm font-medium text-gray-500">
+      <p className="mt-6 text-sm font-medium text-gray-500">
         {techStack.join(" · ")}
       </p>
     </article>
