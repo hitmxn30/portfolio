@@ -9,25 +9,36 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState("me");
 
   useEffect(() => {
-    const sections = ["me", "experience", "skills", "contact"]
+    const sectionIds = ["me", "experience", "skills", "contact"] as const;
+    const sections = sectionIds
       .map((id) => document.getElementById(id))
       .filter((element): element is HTMLElement => element !== null);
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleEntry = entries.find((entry) => entry.isIntersecting);
-        if (visibleEntry) {
-          setActiveSection(visibleEntry.target.id);
-        }
-      },
-      {
-        threshold: 0.35,
-        rootMargin: "-20% 0px -55% 0px",
-      }
-    );
+    const updateActiveSection = () => {
+      const activationOffset = 160;
+      const scrollPosition = window.scrollY + activationOffset;
 
-    sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+      let currentSection: string = "me";
+
+      for (const section of sections) {
+        if (section.offsetTop <= scrollPosition) {
+          currentSection = section.id;
+        } else {
+          break;
+        }
+      }
+
+      setActiveSection(currentSection);
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
   }, []);
 
   const navItemClass = (sectionId: string) =>
