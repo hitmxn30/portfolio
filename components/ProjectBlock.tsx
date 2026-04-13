@@ -19,7 +19,9 @@ export default function ProjectBlock({
     <article className="py-8 sm:py-10">
       <h3
         className={`font-semibold tracking-tight text-gray-950 ${
-          featured ? "text-2xl sm:text-3xl" : "text-xl sm:text-2xl"
+          featured
+            ? "text-2xl text-indigo-900 sm:text-3xl"
+            : "text-xl sm:text-2xl"
         }`}
       >
         {title}

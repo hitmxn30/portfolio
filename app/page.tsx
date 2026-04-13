@@ -12,7 +12,8 @@ export default function Home() {
           Saurabh Suryavanshi
         </h1>
         <p className="mt-6 text-2xl font-semibold tracking-tight text-gray-900">
-          I build scalable backend systems & AI products.
+          I build scalable backend systems &{" "}
+          <span className="text-indigo-700">AI products</span>.
         </p>
         <p className="mt-6 max-w-2xl text-base leading-8 text-gray-600">
           Backend-focused fullstack engineer working on AI-powered systems,
@@ -30,9 +31,9 @@ export default function Home() {
       <Section id="experience" title="Experience">
         <div className="ml-2 border-l border-gray-200">
           <article className="relative py-16 pl-8">
-            <span className="absolute -left-[7px] top-20 h-3.5 w-3.5 rounded-full border border-gray-300 bg-white" />
+            <span className="absolute -left-[7px] top-20 h-3.5 w-3.5 rounded-full border border-indigo-200 bg-indigo-50" />
             <p className="text-sm text-gray-500">Mar 2024 – Jan 2026</p>
-            <h3 className="mt-3 text-2xl font-semibold tracking-tight text-gray-950">
+            <h3 className="mt-3 text-2xl font-semibold tracking-tight text-indigo-800">
               EURON
             </h3>
             <p className="mt-2 text-base font-medium text-gray-800">
@@ -137,9 +138,9 @@ export default function Home() {
           </article>
 
           <article className="relative py-16 pl-8">
-            <span className="absolute -left-[7px] top-20 h-3.5 w-3.5 rounded-full border border-gray-300 bg-white" />
+            <span className="absolute -left-[7px] top-20 h-3.5 w-3.5 rounded-full border border-indigo-200 bg-indigo-50" />
             <p className="text-sm text-gray-500">Jan 2023 – Feb 2024</p>
-            <h3 className="mt-3 text-2xl font-semibold tracking-tight text-gray-950">
+            <h3 className="mt-3 text-2xl font-semibold tracking-tight text-indigo-800">
               INEURON
             </h3>
             <p className="mt-2 text-base font-medium text-gray-800">
