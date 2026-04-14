@@ -6,7 +6,7 @@ import ProjectBlock from "@/components/ProjectBlock";
 import Section from "@/components/Section";
 
 const RESUME_HREF =
-  "https://drive.google.com/file/d/1UMii781EzDmhS2TOCQ-5w04W1ApTfeV9/view?usp=sharing";
+  "https://drive.google.com/file/d/1MqNC9-192gz9nH6fG4ymcEsUbhZbPFcT/view?usp=sharing";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("me");
