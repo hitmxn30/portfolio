@@ -44,10 +44,9 @@ export default function Home() {
   }, []);
 
   const navItemClass = (sectionId: string) =>
-    `block transition-colors ${
-      activeSection === sectionId
-        ? "font-semibold text-indigo-700"
-        : "text-gray-500 hover:text-indigo-700"
+    `block transition-colors ${activeSection === sectionId
+      ? "font-semibold text-indigo-700"
+      : "text-gray-500 hover:text-indigo-700"
     }`;
 
   return (
@@ -75,14 +74,14 @@ export default function Home() {
             Saurabh Suryavanshi
           </h1>
           <p className="mt-6 text-2xl font-semibold tracking-tight text-gray-900">
-            I build scalable backend systems &{" "}
+            I build scalable full-stack systems &{" "}
             <span className="text-indigo-700">AI products</span>.
           </p>
           <p className="mt-6 max-w-2xl text-base leading-8 text-gray-600">
-            Backend-focused fullstack engineer working on AI-powered systems,
+            Fullstack engineer working on AI-powered systems,
             real-time applications, and scalable architectures.
           </p>
-          <p className="mt-4 text-sm text-gray-500">Mumbai, India</p>
+          <p className="mt-4 text-sm text-gray-500">Mumbai/Bangalore, India</p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Button href="#experience">View Work</Button>
             <Button href={RESUME_HREF} external>
@@ -100,7 +99,7 @@ export default function Home() {
                 EURON
               </h3>
               <p className="mt-3 text-base font-medium text-gray-800">
-                Software Development Engineer - 2 (Founding Engineer)
+                Software Development Engineer (Founding Engineer)
               </p>
               <p className="mt-5 max-w-2xl text-base leading-7 text-gray-600">
                 Built and scaled a production-grade AI-powered learning platform
@@ -114,11 +113,10 @@ export default function Home() {
                   description="Production-grade LMS used by 50,000+ users with real-time classes and AI-powered learning."
                   videoEmbedUrl="https://www.youtube.com/embed/ksqYR32UbuI"
                   points={[
-                    "Full-stack system with Next.js, Node.js (TypeScript), PostgreSQL, Redis",
-                    "Multi-currency payments (Razorpay, PayPal) with idempotent workflows",
-                    "Real-time live classes and engagement systems",
-                    "LangChain-based RAG chatbot",
-                    "AWS infra, CI/CD, performance optimization",
+                    "Built a Full-stack system with Next.js, Node.js (TypeScript), PostgreSQL, Redis",
+                    "Architected Real-time live classes and engagement systems",
+                    "Built a LangChain/LangGraph-based RAG chatbot",
+                    "Managed AWS infrastructure, CI/CD pipelines, and performance optimization",
                   ]}
                   techStack={[
                     "Next.js",
@@ -139,11 +137,11 @@ export default function Home() {
                   description="AI-powered mock interviewer generating real-time personalized interviews."
                   videoEmbedUrl="https://www.youtube.com/embed/QqcK-Xbn6lY"
                   points={[
-                    "Resume parsing + structured extraction",
-                    "LLM-based dynamic question generation",
-                    "WebSocket real-time interview system",
-                    "Live coding + streaming feedback",
-                    "Automated evaluation pipelines",
+                    "Engineered resume parsing and structured data extraction pipelines",
+                    "Developed LLM-based dynamic question generation algorithms",
+                    "Architected a WebSocket-based real-time interview system",
+                    "Integrated live coding environments with streaming feedback",
+                    "Built automated evaluation and scoring pipelines",
                   ]}
                   techStack={[
                     "Next.js",
@@ -160,9 +158,9 @@ export default function Home() {
                 <ProjectBlock
                   title="Bytes"
                   points={[
-                    "Built short-form video learning platform",
-                    "FFmpeg pipelines for compression, transcoding, thumbnails",
-                    "Full-stack architecture",
+                    "Built a short-form video learning platform",
+                    "Developed FFmpeg pipelines for video compression, transcoding, and thumbnail generation",
+                    "Architected the full-stack system for scalable content delivery",
                   ]}
                   techStack={["Node.js", "PostgreSQL", "Redis", "FFmpeg", "Next.js"]}
                 />
@@ -170,34 +168,16 @@ export default function Home() {
 
               <div className="border-t border-gray-200 pt-2">
                 <ProjectBlock
-                  title="AI Job Platform"
+                  title="AI-powered Job Platform"
                   points={[
-                    "Aggregated job listings via scraping",
-                    "Vector embeddings + semantic search",
-                    "Personalized job feed",
+                    "Engineered web scraping pipelines to aggregate job listings",
+                    "Implemented vector embeddings and semantic search for job matching",
+                    "Developed a personalized job feed recommendation system",
                   ]}
                   techStack={["Node.js", "LLMs", "Vector DB"]}
                 />
               </div>
 
-              <div className="border-t border-gray-200 pt-2">
-                <ProjectBlock
-                  title="AI Internship Portal"
-                  points={[
-                    "Automated project generation and scoring",
-                    "Human-in-the-loop validation system",
-                  ]}
-                  techStack={["Node.js", "AI pipelines"]}
-                />
-              </div>
-
-              <div className="border-t border-gray-200 pt-2">
-                <ProjectBlock
-                  title="AI Blog Platform"
-                  points={["Automated content generation and publishing workflows"]}
-                  techStack={["LLMs", "Node.js"]}
-                />
-              </div>
             </article>
 
             <article className="relative py-16 pl-8">
@@ -213,9 +193,9 @@ export default function Home() {
                 <ProjectBlock
                   title="Zoom Integration for LMS"
                   points={[
-                    "Integrated Zoom for live lectures",
-                    "Improved engagement and reduced piracy",
-                    "Built using Next.js, Node.js, MongoDB",
+                    "Integrated Zoom APIs to facilitate live interactive lectures",
+                    "Implemented security measures to reduce content piracy",
+                    "Developed the integration using Next.js, Node.js, and MongoDB",
                   ]}
                   techStack={["Next.js", "Node.js", "Express", "MongoDB"]}
                 />
@@ -224,8 +204,8 @@ export default function Home() {
                 <ProjectBlock
                   title="Support Community Portal"
                   points={[
-                    "Built student community system with messaging and video features",
-                    "Improved engagement through peer interaction",
+                    "Built a student community system with messaging and video features",
+                    "Drove increased user engagement through peer-to-peer interaction systems",
                   ]}
                   techStack={["Node.js", "Express", "MongoDB", "Redis", "AWS"]}
                 />
@@ -251,7 +231,7 @@ export default function Home() {
             </p>
             <p className="text-base leading-7 text-gray-600">
               <span className="font-medium text-gray-900">Tools:</span> Docker,
-              Git, AWS
+              Git, Github, AWS
             </p>
           </div>
         </Section>
@@ -310,7 +290,7 @@ export default function Home() {
             </p>
           </div>
           <p className="mt-10 text-base font-medium text-gray-900">
-            Open to backend and AI-focused opportunities.
+            Open to full-stack and AI-focused opportunities.
           </p>
         </Section>
       </main>
